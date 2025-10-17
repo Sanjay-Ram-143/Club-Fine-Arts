@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img id="home" class="logo"  src="img/mainlogo.jpg" alt="logo">
+    <div class="heading">
+        <h1>
+            Nandha Arts and Science College (Autonomous)
+        </h1>
+        <p>
+            Affiliated to Bharathiar University, Coimbatore, Recognized under section 2(f) & 12(B) of the UGC Act 1956 Approved by AICTE, New Delhi & Re-Accredited by NAAC with 'B+' Grade <br>Koorapalayam Pirivu, Pitchandampalayam (Post), Erode 638 052, Tamilnadu, India.
+        </p>
+    </div>
+    <hr>
+
+    <!--Menubar-->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">Fine Arts Club (Talentia)</div>
+
+      <!-- Menu Toggle Button -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <!-- Menu Icon SVG -->
+        <svg id="open-icon" class="icon" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <!-- Close Icon SVG -->
+        <svg id="close-icon" class="icon hidden" viewBox="0 0 24 24">
+          <path d="M6 6l12 12M6 18L18 6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <!-- Nav Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Back To Home</a>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <section class="about-section">
+    <!-- Left Side Image -->
+    <div class="about-image">
+      <img src="img/WhatsApp Image 2025-09-18 at 12.20.39_6292e9e6.jpg" alt="About Image">
+    </div>
+
+    <!-- Right Side Content -->
+  </section>
+  <div class="images">
+    <div class="gallery">
+        <img src="newimg/talentia1.jpg" alt="">
+        <img src="newimg/talentia2.jpg" alt="">
+        <img src="newimg/talentia3.jpg" alt="">
+    </div>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const openIcon = document.getElementById('open-icon');
+    const closeIcon = document.getElementById('close-icon');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    toggleBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      openIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        openIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
